@@ -1,0 +1,15 @@
+---
+- hosts: group1
+  tasks:
+  - name: installing tomcat
+    yum:
+      name: tomcat
+      state: present
+  - name: started the tomcat service
+    service:
+      name: tomcat
+      state: started
+  - name: downlaoad tomcat
+    get_url:
+      url: https://www.oracle.com/webfolder/technetwork/tutorials/obe/fmw/wls/12c/03-DeployApps/files/benefits.war
+      dest: /var/lib/tomcat/webapps/benefits.war

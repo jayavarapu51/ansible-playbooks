@@ -1,0 +1,5 @@
+---
+- hosts: group1
+  roles:
+   - java8-role
+   - tomcat9-role

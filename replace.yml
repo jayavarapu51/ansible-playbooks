@@ -1,0 +1,8 @@
+---      
+- hosts: group1
+  tasks:
+  - name: replace to name
+    ansible.builtin.replace:
+      path: /tmp/xyz.conf
+      regexp: "boys"
+      replace: "girls"
